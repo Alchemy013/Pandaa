@@ -3,7 +3,7 @@ import HeroSection from "./components/HeroSection";
 import Navbar from "./components/Navbar";
 import Projects from "./components/Projects";
 import About from "./components/About";
-import SecondHero from "./components/Secondhero";
+import SecondHero from "./components/SecondHero";
 import ParallaxSection from "./components/Parallex";
 import Block from "./components/Block";
 import Footer from "./components/Footer";
