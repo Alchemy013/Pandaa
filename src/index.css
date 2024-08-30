@@ -4,9 +4,32 @@
 @tailwind components;
 @tailwind utilities;
 
+.fade-in {
+  opacity: 0;
+  transition: opacity 1s ease-in;
+}
 
-:root{
-  font-family: "Inter",sans-serif;
-  background-color: black;
-  
+.fade-in.show {
+  opacity: 1;
+}
+
+.backdrop-blur-custom {
+  backdrop-filter: blur(50px); 
+}
+@keyframes moveUpDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-25px);
+  }
+}
+
+.second-hero-container {
+  @apply flex justify-center space-x-4; /* Adjust spacing as needed */
+}
+
+.animated-image {
+  @apply w-1/5; /* Adjust width as needed */
+  animation: moveUpDown 3.5s infinite ease-in-out;
 }

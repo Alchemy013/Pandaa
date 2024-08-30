@@ -16,11 +16,9 @@ import indian from "../assets/indian.jpeg";
 import { FaXTwitter, FaFacebook, FaInstagram } from "react-icons/fa6";
 
 export const LINKS = [
-  { text: "Dishes", targetId: "dishes" },
   { text: "About", targetId: "about" },
   { text: "Mission", targetId: "mission" },
   { text: "Expertise", targetId: "expertise" },
-  { text: "Review", targetId: "review" },
   { text: "Contact", targetId: "contact" },
 ];
 
