@@ -2,7 +2,7 @@ import React from "react";
 import HeroSection from "./components/HeroSection";
 import Navbar from "./components/Navbar";
 import Projects from "./components/Projects";
-import About from "./components/about";
+import About from "./components/About";
 import SecondHero from "./components/secondhero";
 import ParallaxSection from "./components/Parallex";
 import Block from "./components/Block";
