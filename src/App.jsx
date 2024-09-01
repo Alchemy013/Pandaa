@@ -8,7 +8,6 @@ import ParallaxSection from "./components/Parallex";
 import Block from "./components/Block";
 import Footer from "./components/Footer";
 import Button from "./components/Button";
-
 const App = () => {
   return (
     <main className="overflow-y-hidden text-neutral-200 antialiased">

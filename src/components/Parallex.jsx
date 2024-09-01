@@ -4,7 +4,7 @@ import image1 from "../assets/pandamain.png"; // Ensure this path is correct and
 
 const ParallaxSection = () => {
   return (
-    <div className="relative h-[65vh] overflow-hidden">
+    <div className="relative h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-[80vh] xl:h-[90vh] 2xl:h-[100vh] overflow-hidden">
       {/* Background Image */}
       <img
         src={gif}
@@ -16,11 +16,12 @@ const ParallaxSection = () => {
       <div className="absolute inset-0 bg-black opacity-70"></div>
 
       {/* Foreground Content */}
-      <div className=" flex items-center justify-center h-full">
+      <div className="flex items-center justify-center h-full px-2 sm:px-4">
         <img
           src={image1}
           alt="Middle Image"
-          className="max-w-md mx-auto transform transition-transform duration-700 hover:scale-110 h-[750px]"
+          className="h-[120%] w-[70%] sm:w-[60%] md:w-[50%] lg:w-[40%] xl:w-[30%] 2xl:w-[25%] mx-auto transform transition-transform duration-700 hover:scale-110"
+          style={{ maxHeight: "calc(100vh - 2rem)" }} // Adjust based on the available height
         />
       </div>
     </div>
