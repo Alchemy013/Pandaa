@@ -35,7 +35,7 @@ const HeroSection = () => {
     const videoElement = videoRef.current;
     if (videoElement) {
       videoElement.muted = false;
-      videoElement.currentTime = 0; // Reset the video to start from the beginning
+      videoElement.currentTime = 0;
       videoElement.play();
       setIsMuted(false);
       setShowLogo(false); // Hide the logo when the video restarts
@@ -43,7 +43,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative flex h-screen items-center justify-center">
+    <section className="relative flex h-screen items-center justify-center overflow-hidden">
       <div className="absolute inset-0 -z-20 h-full w-full overflow-hidden">
         <video
           ref={videoRef}
@@ -56,19 +56,25 @@ const HeroSection = () => {
         ></video>
       </div>
       <div className="absolute inset-0 -z-10 bg-gradient-to-b from-transparent from-70% to-black"></div>
-      <div className="relative z-20 flex h-screen items-center justify-center">
+      <div className="relative z-20 flex h-full items-center justify-center">
         <img
           src={logo}
           alt="Panda"
-          className={`w-full p-4 h-full justify-center fade-in ${
-            showLogo ? "show" : ""
-          }`}
-          style={{ filter: "invert(1)" }}
+          className={`p-4 ${
+            showLogo ? "opacity-100 scale-100" : "opacity-0 scale-75"
+          } transition-opacity duration-1000 ease-in-out`}
+          style={{
+            width: "auto",
+            height: "auto",
+            maxWidth: "80%",
+            maxHeight: "80%",
+            filter: "invert(1)",
+          }}
         />
         {isMuted && (
           <button
             onClick={handleUnmute}
-            className="absolute right-0 bottom-10 black p-2 rounded-3xl shadow-lg"
+            className="absolute right-0 bottom-10 bg-black p-2 rounded-3xl shadow-lg"
           >
             Unmute
           </button>

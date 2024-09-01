@@ -71,7 +71,7 @@ const Navbar = () => {
             <img
               src={logo}
               alt="logo"
-              width={50}
+              width={60}
               height={15}
               className="ml-4"
             />
@@ -102,7 +102,7 @@ const Navbar = () => {
               <a
                 key={index}
                 href={`#${link.targetId}`}
-                className="block p-4 uppercase tracking-tighter text-black font-bold hover:bg-gray-100 border-b border-black"
+                className="block p-4 uppercase tracking-tighter text-white font-bold hover:bg-gray-100 border-b border-white"
                 onClick={(e) => handleScroll(e, link.targetId)}
               >
                 {link.text}
